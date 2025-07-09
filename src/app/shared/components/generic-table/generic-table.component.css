@@ -1,0 +1,10 @@
+
+
+th {
+    background-color: #F44336 !important; 
+    color: white;
+}
+.no-data {
+    text-align: center;
+    font-size: 1.2rem;
+}

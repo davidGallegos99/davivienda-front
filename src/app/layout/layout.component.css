@@ -1,0 +1,35 @@
+.layout-container {
+  height: 100vh;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.content {
+  padding: 3rem;
+}
+
+.menu-btn {
+  margin-right: 1rem;
+}
+.mat-mdc-list-item {
+  cursor: pointer !important;
+  display: flex;
+  align-items: center;
+}
+
+.list-item {
+  display: flex;
+  gap: .5rem;
+  user-select: none;
+}
+
+img {
+  margin-top: 4rem;
+  
+}
+
+.pointer {
+  cursor: pointer;
+}

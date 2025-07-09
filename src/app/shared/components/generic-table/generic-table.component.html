@@ -1,0 +1,31 @@
+@if(data.length > 0;) {
+  <table mat-table [dataSource]="data" class="mat-elevation-z8">
+
+  @for (col of displayedColumns; track col) {
+    <ng-container [matColumnDef]="col.key">
+      <th mat-header-cell *matHeaderCellDef> {{ col.label | titlecase }} </th>
+
+      <td mat-cell *matCellDef="let item">
+        @if (col.key === 'actions') {
+          <ng-container *ngTemplateOutlet="actionsTemplate; context: { $implicit: item }" />
+        } @else {
+          @if(col.pipe === 'currency') {
+            {{ getCellValue(item, col.key) | currency }}
+          } @else if(col.pipe === 'date'){
+            {{ getCellValue(item, col.key) | date:'dd/MM/yyyy hh:mm' }}
+          } @else if(!col.pipe){
+            {{ getCellValue(item, col.key) }}
+          }
+      }
+      </td>
+    </ng-container>
+  }
+
+  <tr mat-header-row *matHeaderRowDef="colsDef"></tr>
+  <tr mat-row *matRowDef="let row; columns: colsDef"></tr>
+</table>
+}@else{
+  <div class="no-data">
+    <p>No hay datos disponibles</p>
+  </div>
+}

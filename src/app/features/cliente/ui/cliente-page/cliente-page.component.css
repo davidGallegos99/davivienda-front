@@ -1,0 +1,9 @@
+.add-button {
+    margin: 1rem;
+    align-self: flex-end;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+}

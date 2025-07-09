@@ -1,0 +1,9 @@
+<app-title [routeBack]="true">
+    Solicitudes de "{{this.persona?.nombres}} {{this.persona?.apellidos}}"
+</app-title>
+<div class="button-container">
+    <button type="button" color="primary" class="add-button" (click)="showSolicitudForm()"  mat-mini-fab >
+        <mat-icon >add</mat-icon>
+    </button>
+</div>
+<app-solicitud-list></app-solicitud-list>

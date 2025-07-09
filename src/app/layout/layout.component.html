@@ -1,0 +1,25 @@
+<mat-sidenav-container class="layout-container">
+  <mat-sidenav  #sidenav [opened]="opened" mode="side" class="sidenav">
+    <mat-toolbar routerLink="/" class="pointer"><mat-icon class="mat-18">account_balance</mat-icon>&nbsp; Davivienda</mat-toolbar>
+    <mat-list>
+      <mat-list-item class="" routerLink="/clientes" mat-ripple>
+        <div class="list-item">
+          <mat-icon>person</mat-icon>
+          Clientes
+        </div>
+        </mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="warn">
+      <button type="button" mat-icon-button (click)="sidenav.toggle()" class="menu-btn">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Davivienda App</span>
+    </mat-toolbar>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

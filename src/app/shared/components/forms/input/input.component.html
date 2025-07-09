@@ -1,0 +1,29 @@
+<div class="mb-4 w-full">
+    <label [for]="name()" class="block text-xl font-medium leading-6 text-gray-900">{{ label() }}</label>
+    <div class="w-full">
+        <mat-form-field class="w-full">
+            <mat-label>{{label()}}</mat-label>
+            <input
+                matInput
+                [type]="inputType()"
+                [name]="name()"
+                autocomplete="off"
+                [maxLength]="maxlength()"
+                [id]="name()"
+                [placeholder]="placeholder()"
+                [formControl]="control()"
+                [readonly]="readonly() === undefined ? false : readonly()"
+                [disabled]="isDisabled()"
+                [ngClass]="{
+                    'disabled-input': isDisabled(),
+                    'ng-invalid': true,
+                    'ng-dirty': true,
+                }"
+                [class]="'w-full ' + this.isInvalid()"
+            />        
+            <mat-error>
+                <app-input-error-messages [control]="control()" />
+            </mat-error>
+        </mat-form-field>
+    </div>
+</div>

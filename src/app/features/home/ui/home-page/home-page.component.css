@@ -1,0 +1,21 @@
+.title {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.title > img {
+    border-radius: 40px;
+}
+.title > h4 {
+    font-size: 2rem ;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    align-self: center;
+    text-align: center;
+    line-height: 45px;
+}

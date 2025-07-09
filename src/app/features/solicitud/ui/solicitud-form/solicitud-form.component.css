@@ -1,0 +1,11 @@
+.container {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 14px;
+}
+
+.actions-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}

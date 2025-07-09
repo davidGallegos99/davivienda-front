@@ -1,0 +1,7 @@
+<app-generic-table [data]="solicitudes" [displayedColumns]="service.columnas">
+  <ng-template #actions let-item>
+    <button type="button" mat-icon-button color="primary" (click)="editar(item)">
+      <mat-icon>edit</mat-icon>
+    </button>
+  </ng-template>
+</app-generic-table>

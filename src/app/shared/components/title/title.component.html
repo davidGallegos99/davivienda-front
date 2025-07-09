@@ -1,0 +1,8 @@
+<h1>
+    @if(routeBack()) {
+        <button (click)="location.back()" mat-icon-button aria-label="Ejemplo">
+            <mat-icon>arrow_back</mat-icon>
+        </button>
+    }
+    <ng-content></ng-content>
+</h1>
